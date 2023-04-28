@@ -10,10 +10,8 @@ import org.hibernate.query.Query;
 import java.util.Date;
 
 public class ReaderErrataTest {
-
-    private static SessionFactory factory = new Configuration().configure().buildSessionFactory();
-
-    private static Session session = factory.openSession();
+    private static final SessionFactory factory = new Configuration().configure().buildSessionFactory();
+    private static final Session session = factory.openSession();
 
     public static void main(String[] args) {
 

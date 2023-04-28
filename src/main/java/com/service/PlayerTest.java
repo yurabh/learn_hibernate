@@ -8,9 +8,9 @@ import org.hibernate.query.Query;
 
 public class PlayerTest {
 
-    private static SessionFactory factory = new Configuration().configure().buildSessionFactory();
+    private static final SessionFactory factory = new Configuration().configure().buildSessionFactory();
 
-    private static Session session = factory.openSession();
+    private static final Session session = factory.openSession();
 
     public static void main(String[] args) {
 
@@ -59,7 +59,7 @@ public class PlayerTest {
         System.out.println("Select all players order by ask");
 
         session.createQuery("SELECT p FROM Player p WHERE p.id < 15 " +
-                " ORDER BY p.userName desc")
+                        " ORDER BY p.userName desc")
                 .stream()
                 .forEach((p -> System.out.println(p.toString())));
 
