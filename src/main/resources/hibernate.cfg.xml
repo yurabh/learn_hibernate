@@ -11,9 +11,16 @@
         <property name="hibernate.connection.password">root</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
-        <property name="hibernate.hbm2ddl.auto">update</property>
-        <mapping class="com.domain.Player"/>
-        <mapping class="com.domain.Book"/>
-        <mapping class="com.domain.ReaderErrata"/>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <!--        <mapping class="com.domain.Player"/>-->
+        <!--        <mapping class="com.domain.Book"/>-->
+        <!--        <mapping class="com.domain.ReaderErrata"/>-->
+        <!--        <mapping class="com.inheritance.table_per_class_union.domain.CreditCard"/>-->
+        <!--        <mapping class="com.inheritance.table_per_class_union.domain.BankAccount"/>-->
+        <!--        <mapping class="com.inheritance.table_per_class_union.BillingDetails"/>-->
+        <mapping class="com.inheritance.one_table_for_all.domain.CreditCardOneTable"/>
+        <mapping class="com.inheritance.one_table_for_all.domain.BankAccountOneTable"/>
+        <mapping class="com.inheritance.one_table_for_all.BillingDetailsOneTable"/>
     </session-factory>
 </hibernate-configuration>
