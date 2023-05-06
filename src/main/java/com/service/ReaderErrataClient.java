@@ -9,7 +9,7 @@ import org.hibernate.query.Query;
 
 import java.util.Date;
 
-public class ReaderErrataTest {
+public class ReaderErrataClient {
     private static final SessionFactory factory = new Configuration().configure().buildSessionFactory();
     private static final Session session = factory.openSession();
 

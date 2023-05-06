@@ -6,7 +6,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
-public class PlayerTest {
+public class PlayerClient {
 
     private static final SessionFactory factory = new Configuration().configure().buildSessionFactory();
 
