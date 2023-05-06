@@ -12,7 +12,7 @@ import java.util.Objects;
 
 public class HibernateClientOne {
     private static final SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-    private static final String FROM_BILLINGS_DETAILS = "SELECT bd FROM BillingDetailsOneTable bd";
+    private static final String BILLINGS_DETAILS = "SELECT bd FROM BillingDetailsOneTable bd";
 
     public static void main(String[] args) {
         CreditCardOneTable creditCardOneTable = createCreditCard();
@@ -63,7 +63,7 @@ public class HibernateClientOne {
         try {
             session = sessionFactory.getCurrentSession();
             transaction = session.beginTransaction();
-            return session.createQuery(FROM_BILLINGS_DETAILS).list();
+            return session.createQuery(BILLINGS_DETAILS).list();
         } catch (Exception e) {
             Objects.requireNonNull(transaction).rollback();
             throw e;
